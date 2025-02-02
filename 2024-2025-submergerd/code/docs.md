@@ -8,3 +8,6 @@
  - 5th is forwards or backwards 0 for forwards and 1 for backwards
 #### the actual code:
 ![alt text](https://github.com/nusp09/kscs_fll/blob/main/2024-2025-submergerd/pictures/ded_strait_v2_full.png)
+now lets break all of that down
+first the initialisations:
+![alt text](https://github.com/nusp09/kscs_fll/blob/main/2024-2025-submergerd/pictures/ded_strait_initialisation.png)
