@@ -36,8 +36,13 @@ acc,decc - used for acceleration / decceleration control
 
 calculations:
 
+
+![alt text](https://github.com/nusp09/kscs_fll/blob/main/2024-2025-submergerd/pictures/motor.png)
+
+
 motor uses an input for whether 'input' (the first parameter) is calculated as rotations or as cm. at the begining of the program the relative motor position of both of the motors is set to 0 so that we can actually tell how far the robot has moved. then if rotations was chosen we add the relative positions together and divide them by 720.
 
 the reason for this is that usually for 1 motor you would divide the mean by 360 but to remove a step instead of dividing by 2 and then by 360 we just divided it by 720.
 
 whereas if we wanted to move a certian amount of cm first we had to find the circumference of our wheels then divide the 720 by that to get the amount of cm moved.
+
