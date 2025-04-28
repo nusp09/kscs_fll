@@ -2,9 +2,9 @@
 ### ded strait
 #### what all of the parameters do:
  - 1st   is the input so how many of the thing you want to do
- - teh second one is th distance selector 1 for rottions 2 for cm
+ - the second one is the distance selector 1 for rotions, 2 for cm
  - 3rd is acceleration or how much the speed is being increased by each cycle
- - 4th is top speed ussually i like it to be at 100%
+ - 4th is top speed
  - 5th is forwards or backwards 0 for forwards and 1 for backwards
 #### the actual code:
 ![alt text](https://github.com/nusp09/kscs_fll/blob/main/2024-2025-submergerd/pictures/ded_strait_v2_full.png)
@@ -64,3 +64,39 @@ this is the acceleration portion of the code. acceleration is one of the things 
 
 finally (i dont think we need a picture or this, if you really want to look see the top of the document for the full script) is that we start to move in the direction of 'correction' we apply a loop delay of 0.05 seconds and at the end of the script outside of the loop we set the movement motors back to normal.
 
+
+
+### turn gud
+#### the actual code
+
+
+![alt text](https://github.com/nusp09/kscs_fll/blob/main/2024-2025-submergerd/pictures/turn_gud.png)
+
+
+now i know this look like alot again but the majority of the princibles are the same for instance the pd mechanics so i wont go back through them again however there are some slight changes in order to change ir from moving forward to turning so lets get started on them.
+
+
+![alt text](https://github.com/nusp09/kscs_fll/blob/main/2024-2025-submergerd/pictures/turn_gud_vars.png)
+
+
+
+the first one id that we are now using a graphing function this was purely for testing and could have been taken out but its useful to be able to visuallise what the controller is thinking.
+the next is a timer. one of the issues we ran into whilst testing is that it would just not move if it was like 2 degrees off of the target. this is why we decided to add the time out feature into the controller. you can see this by the loop exit conditions being either we are within 1 degree of the target or the timer runs over 3.
+one of the other differences is that ther is no integral. we found in this aplication that the integral lead to too much oscilation and decided that it was best to just leave it as a pd controler.
+another difference is that the target is no longer 0 minus the yaw but its the target - the yaw the target being the desired angle.
+
+
+![alt text](https://github.com/nusp09/kscs_fll/blob/main/2024-2025-submergerd/pictures/turn_gud_direction.png)
+
+
+now lets get one thing out of the way first. the absolute balue of a number is the positive of said number e.g. abs(1)=1 and abs(-1)=1.
+so this ensures that we arent going above a ceritan speed and that we are turning in the correct direction finaly moving one weel in that direction and the other in the other direction by multiplying it by -1 and plotting things on the graph.
+
+
+### init
+
+
+![alt text](https://github.com/nusp09/kscs_fll/blob/main/2024-2025-submergerd/pictures/init.png)
+
+
+finally we have the init block. this should run at the begining of every code and makes sure all things are in order setting all relative positions to 0 attachment motors to hold at stop as well as movement motors and initialising many important variables 
