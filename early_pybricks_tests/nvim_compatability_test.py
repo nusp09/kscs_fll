@@ -10,7 +10,7 @@ example_motor = Motor(Port.A)
 
 # Make the motor run clockwise at 500 degrees per second.
 example_motor.run(500)
-
+hub.light.on(Color.RED)
 # Wait for three seconds.
 wait(3000)
 
