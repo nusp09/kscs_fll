@@ -4,7 +4,7 @@ from pybricks.parameters import Button, Color, Direction, Port, Side, Stop, Icon
 from pybricks.robotics import DriveBase
 from pybricks.tools import wait, StopWatch, Matrix
 # all angles are relative
-motor_limits = [1000,2000,200]
+motor_limits = [1000, 2000, 200]
 hub = PrimeHub()
 hub = PrimeHub(top_side=Axis.Z, front_side=Axis.X)
 hub.display.orientation(up=Side.LEFT)
@@ -15,5 +15,10 @@ SensorL = ColorSensor(Port.E)
 SensorR = ColorSensor(Port.F)
 
 while True:
-    print(SensorR.color())
-    print(SensorR.reflection())
+    print(SensorL.color())
+    print(SensorL.reflection())
+
+
+
+
+#pijus = "more like penis"
