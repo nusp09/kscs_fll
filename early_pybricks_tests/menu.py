@@ -19,7 +19,7 @@ SensorR = ColorSensor(Port.F)
 drive = DriveBase(driveL, driveR, wheel_diameter=62.4, axle_track=111)
 drive.use_gyro(True)
 charger_status = {0:'not charging', 1:'charging', 2:'done charging', 3:'issue charging'}
-battery_down = Matrix([
+battery = [Matrix([
     [0, 0, 0, 0, 1],
     [0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0],
@@ -27,8 +27,44 @@ battery_down = Matrix([
     [0, 0, 0, 0, 0],
     ]
 
-        )*100
-hub.display.icon(battery_down)
-while True:
-    print(charger_status[hub.charger.status()])
+        )*100,
+Matrix([
+    [0, 0, 0, 1, 0],
+    [0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0],
+    ]
 
+        )*100,
+Matrix([
+    [0, 0, 1, 0, 0],
+    [0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0],
+    ]
+
+        )*100,
+
+
+
+                ]
+while True:
+    if hub.charger.status() == 0:
+        hub.display.icon(battery[0])
+        wait(500)
+        hub.display.icon(battery[1])
+        wait(500)
+        hub.display.icon(battery[2])
+        wait(500)
+        hub.charger.status()
+    if hub.charger.status() == 1:
+        hub.display.icon(battery[2])
+        wait(500)
+        hub.display.icon(battery[1])
+        wait(500)
+        hub.display.icon(battery[0])
+        wait(500)
+
+    wait(5)
