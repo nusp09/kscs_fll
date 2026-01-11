@@ -1,3 +1,4 @@
+
 #start at the first line of the program
 from pybricks.hubs import PrimeHub
 from pybricks.pupdevices import Motor, ColorSensor, UltrasonicSensor, ForceSensor
@@ -6,6 +7,7 @@ from pybricks.robotics import DriveBase
 from pybricks.tools import wait, StopWatch, Matrix, run_task, multitask
 # all angles are relative
 motor_limits = [1000, 2000, 200]
+
 hub = PrimeHub()
 hub = PrimeHub(top_side=Axis.Z, front_side=Axis.X)
 hub.display.orientation(up=Side.LEFT)
@@ -20,24 +22,28 @@ SensorR = ColorSensor(Port.F)
 base = DriveBase(driveL, driveR, wheel_diameter=62.4, axle_track=111)
 base.use_gyro(True)
 #####
-base.straight(785)
-base.turn(45)
-base.straight(35)
-AttachmentL.run_angle(500,-360)
-AttachmentL.run_angle(500,360)
-base.straight(-25)
-base.turn(-45)
-base.straight(30)
-AttachmentL.run_angle(500,-360)
-AttachmentL.run_angle(500,360)
-base.turn(90)
-base.straight(-280)
-base.turn(-125)
-base.straight(-1000,Stop.HOLD,False)
-wait(6700)
-
-base.straight(90)
-base.turn(-50)
+base.straight(750)
+base.straight(-100)
+AttachmentL.run_angle(1000,-720)
+base.straight(175)
+base.turn(75)
+base.straight(62.5)
+AttachmentL.run_angle(1000,720)
+base.turn(15)
+base.straight(300)
+AttachmentL.run_angle(1000,-1080)
+AttachmentL.run_angle(1000,1080)
 base.straight(-200)
-base.turn(50)
-base.straight(-650)
+base.turn(235)
+base.straight(100)
+base.turn(35)
+AttachmentL.run_angle(1000,-720)
+base.straight(-850)
+AttachmentL.run_angle(1000,720)
+
+
+
+
+
+
+
