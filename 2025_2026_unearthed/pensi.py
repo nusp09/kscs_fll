@@ -25,7 +25,15 @@ AttachmentR.run_angle(500, -270)
 base.straight(-75)
 AttachmentR.run_angle(500, 270)
 base.turn(-90)
-base.straight(120)
+base.straight(110)
 base.turn(90)
-base.straight(270)
-base.straight(-550)
+base.straight(280)
+base.straight(-50)
+base.turn(-45)
+base.straight(120)
+base.turn(45)
+base.straight(1000)
+
+
+
+
