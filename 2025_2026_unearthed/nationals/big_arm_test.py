@@ -20,4 +20,9 @@ SensorR = ColorSensor(Port.F)
 base = DriveBase(driveL, driveR, wheel_diameter=62.4, axle_track=111)
 base.use_gyro(True)
 #####
+right_angle = 360*10
+base.straight(1000)
+AttachmentR.run_angle(1000,-right_angle)
+AttachmentL.run_angle(1000,-right_angle)
+AttachmentR.run_angle(1000,right_angle)
 
