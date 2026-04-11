@@ -1,19 +1,20 @@
 target: 450 pts
 150 seconds 
 450/150 = 3 pts/s min
-
-
-route 1 soil, brush, all 3 top soils
-60/3 = 20 s
-max 20s including change overs
-route 2 sand, ship, artifacts raised, crain flag, sand flag
-70/3 ~ 23s
-max 23s including change overs
-route 3 minecart, scale thing knocked over, roof lifted
-70/3 ~ 23s incliding changeovers
-route 4 silo, push over red bar thing, scale pull out thing
-50/3 ~ 16s including cahnegeovers
-route 5 flippy spinny thing, boulders, heavy lifting
-90/3 = 30s including changeovers
-route 6 forum thing, flag near forum and statue rebuild
-65/3 ~ 11 including changeovers
+-------------------------------------------------------------------------------------
+description                                                    |  ideal  |  actual  |
+                                                               |  time   |  time    |
+---------------------------------------------------------------|         |          |
+route 1 soil, brush, all 3 top soils                           |  20     |          |
+60/3 = 20 s including change overs                             |         |          |
+route 2 sand, ship, artifacts raised, crain flag, sand flag    |  23     |          |
+70/3 ~ 23s including change overs                              |         |          |
+route 3 minecart, scale thing knocked over, roof lifted        |  23     |          |
+70/3 ~ 23s incliding changeovers                               |         |          |
+route 4 silo, push over red bar thing, scale pull out thing    |  16     |          |
+50/3 ~ 16s including cahnegeovers                              |         |          |
+route 5 flippy spinny thing, boulders, heavy lifting           |  30     |          |
+90/3 = 30s including changeovers                               |         |          |
+route 6 forum thing, flag near forum and statue rebuild        |  20     |          |
+65/3 ~ 20 including changeovers                                |         |          |
+--------------------------------------------------------------------------------------
