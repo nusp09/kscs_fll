@@ -32,7 +32,7 @@ async def main():
     await AttachmentR.run_angle(500,180)
     await base.straight(-150)
     await base.turn(-45)
-    await multitask(base.straight(380),move_arm())
+    await multitask(base.straight(360),move_arm())
     await base.turn(70)
     await base.straight(740)
 run_task(main())

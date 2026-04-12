@@ -9,7 +9,7 @@ route 1 soil, brush, all 3 top soils                           |   20    |    16
 60/3 = 20 s including change overs                             |         |          |
 route 2 sand, ship, artifacts raised, crain flag, sand flag    |   23    |    20    |
 70/3 ~ 23s including change overs                              |         |          |
-route 3 minecart, scale thing knocked over, roof lifted        |   23    |          |
+route 3 minecart, scale thing knocked over, roof lifted        |   23    |    17    |
 70/3 ~ 23s incliding changeovers                               |         |          |
 route 4 silo, push over red bar thing, scale pull out thing    |   16    |    20    |
 50/3 ~ 16s including cahnegeovers                              |         |          |
