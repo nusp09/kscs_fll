@@ -138,7 +138,6 @@ def outing6():
     AttachmentL.run_angle(500,200)
     AttachmentL.run_angle(500,-200)
     AttachmentL.run_angle(500,200)
-    AttachmentL.run_angle(500,-200)
     base.straight(-50)
     base.turn(-90)
     base.straight(-180)
