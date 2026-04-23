@@ -3,13 +3,13 @@ from pybricks.hubs import PrimeHub
 from pybricks.pupdevices import Motor, ColorSensor, UltrasonicSensor, ForceSensor
 from pybricks.parameters import Button, Color, Direction, Port, Side, Stop, Icon, Axis
 from pybricks.robotics import DriveBase
-from pybricks.tools import wait, StopWatch, Matrix, run_task, multitask
+from pybricks.tools import wait, StopWatch, Matrix, run_task, multitask, hub_menu
 # all angles are relative
 motor_limits = [1000, 2000, 200]
-hub = PrimeHub()
 hub = PrimeHub(top_side=Axis.Z, front_side=Axis.X)
 hub.display.orientation(up=Side.LEFT)
 hub.speaker.volume(100)
+hub.system.set_stop_button(Button.BLUETOOTH)
 
 driveL = Motor(Port.A, Direction.COUNTERCLOCKWISE)
 driveR = Motor(Port.B)
@@ -22,6 +22,8 @@ base.use_gyro(True)
 #####
 selected = hub_menu("1", "2", "3", "4", "5", "6")
 
+def init():
+    base.reset()
 def outing1():
     base.straight(700)
     base.straight(-120)
@@ -39,12 +41,12 @@ def outing1():
     base.straight(-800)
     AttachmentL.run_angle(300,-270)
 def outing2():
-    right_angle = 360*10
+    right_angle = 360*11
     base.straight(750)
     AttachmentR.run_angle(1000,-right_angle)
-    AttachmentL.run_angle(1000,-right_angle)
+    AttachmentL.run_angle(1000,-right_angle*1.1)
     AttachmentR.run_angle(1000,right_angle)
-    base.straight(-750)
+    base.straight(-720)
 def outing3():
     async def move_arm():
         await AttachmentR.run_angle(500,-180)
@@ -83,6 +85,7 @@ def outing4():
     base.turn(-9)
     base.turn(-9)
     base.turn(-9)
+    base.straight(-10)
     base.turn(-9)
     base.turn(-9)
     base.turn(50)
@@ -119,14 +122,14 @@ def outing5():
         await base.straight(300)
         await base.turn(-90)
         await multitask(base.straight(700),front_rack('left'))
-    run_task(outing_5)
+    run_task(outing_5())
 def outing6():
-    base.straight(700)
-    base.turn(20)
+    base.straight(680)
+    base.turn(25)
     base.straight(400)
     AttachmentR.run_angle(500,320)
     base.straight(-200)
-    base.turn(70)
+    base.turn(65)
     base.straight(500)
     base.turn(-90)
     base.straight(380)
@@ -139,7 +142,7 @@ def outing6():
     base.straight(-50)
     base.turn(-90)
     base.straight(-180)
-
+######
 if selected == "1":
     outing1()
 elif selected == "2":
@@ -152,4 +155,3 @@ elif selected == "5":
     outing5()
 elif selected == "6":
     outing6()
-
