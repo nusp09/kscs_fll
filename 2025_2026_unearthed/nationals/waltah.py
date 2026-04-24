@@ -44,7 +44,7 @@ def outing1():
     AttachmentL.run_angle(300,-270)
 def outing2():
     right_angle = 360*11#set how to do a 90 degree turn with the screw gear
-    base.straight(750)
+    base.straight(730)
     AttachmentR.run_angle(1000,-right_angle)#puts arm down
     AttachmentL.run_angle(1000,-right_angle*1.1)#turns the end gears
     AttachmentR.run_angle(1000,right_angle)
@@ -86,7 +86,7 @@ def outing4():
     AttachmentR.run_angle(250,-180)
     for i in range(5):
         base.turn(-9)
-    base.straight(-10)
+        base.straight(-5)
     base.turn(-9)
     base.turn(-9)
     base.turn(50)#pulls the pan out
