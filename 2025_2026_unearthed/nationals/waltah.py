@@ -81,8 +81,8 @@ def outing4():
     base.straight(120)
     base.turn(-45)
     AttachmentR.run_angle(250,180)
-    base.straight(200)
-    base.turn(25)
+    base.straight(210)
+    base.turn(30)
     AttachmentR.run_angle(250,-180)
     for i in range(5):
         base.turn(-9)
